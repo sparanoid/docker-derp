@@ -35,6 +35,9 @@ docker run \
   -v /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock \
   sparanoid/derp:edge \
   derper --hostname example.com
+
+# Rum `derpprobe`
+docker run sparanoid/derp:edge derpprobe
 ```
 
 Docker Compose example:
