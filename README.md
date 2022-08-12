@@ -2,6 +2,9 @@
 
 Tailscale DERP server `derper` and `derpprobe` for Docker.
 
+- Official documentation: [Custom DERP Servers](https://tailscale.com/kb/1118/custom-derp-servers/)
+- All available options: [cmd/derper/derper.go](https://github.com/tailscale/tailscale/blob/main/cmd/derper/derper.go)
+
 ```fish
 docker run \
   --restart=always --init \
