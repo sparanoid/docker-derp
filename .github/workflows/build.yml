@@ -67,7 +67,8 @@ jobs:
             type=sha
 
       - name: Build and push
-        uses: docker/bake-action@v5
+        uses: docker/bake-action@v6
+        source: .
         with:
           files: |
             ./docker-bake.hcl
