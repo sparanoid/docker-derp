@@ -11,7 +11,7 @@ docker run \
   -p 80:80 \
   -p 443:443 \
   -p 3478:3478/udp \
-  sparanoid/derp:edge \
+  ghcr.io/sparanoid/derp:edge \
   derper --hostname example.com
 
 # External certificates
@@ -22,7 +22,7 @@ docker run \
   -p 3478:3478/udp \
   -v (path_to_cert_root)/fullchain.cer:/app/certs/derp.example.com.net.crt \
   -v (path_to_cert_root)/example.com.key:/app/certs/derp.example.com.key \
-  sparanoid/derp:edge \
+  ghcr.io/sparanoid/derp:edge \
   derper --hostname example.com \
     --certmode manual
 
@@ -33,18 +33,18 @@ docker run \
   -p 443:443 \
   -p 3478:3478/udp \
   -v /var/run/tailscale/tailscaled.sock:/var/run/tailscale/tailscaled.sock \
-  sparanoid/derp:edge \
+  ghcr.io/sparanoid/derp:edge \
   derper --hostname example.com
 
 # Rum `derpprobe`
-docker run sparanoid/derp:edge derpprobe
+docker run ghcr.io/sparanoid/derp:edge derpprobe
 ```
 
 Docker Compose example:
 
 ```yaml
 derp:
-  image: sparanoid/derp
+  image: ghcr.io/sparanoid/derp
   restart: always
   init: true
   ports:
